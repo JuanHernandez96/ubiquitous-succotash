@@ -32,6 +32,7 @@ router.get('/api/party/:id', (req, res) => {
   });
 
 router.get('/api/party/:id', (req, res) => {
+    
   const sql = `SELECT * FROM parties WHERE id = ?`;
   const params = [req.params.id];
   db.query(sql, params, (err, row) => {
